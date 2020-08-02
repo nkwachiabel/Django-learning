@@ -1,0 +1,69 @@
+{% extends 'first_app/base.html' %}
+{% comment %} {% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Django Guitar Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        {% comment %} <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/> {% endcomment %}
+    {% comment %} </head>
+    <body> {% endcomment %}
+        
+        
+        {% comment %} <img src="{% static 'images/django.png' %}" alt="Oh Oh"> {% endcomment %}
+        
+        {% comment %} <div class="djangotwo">
+        <div class="jumbotron"> {% endcomment %} 
+
+    {% block body_block %}
+        {% comment %} <h1>Welcome to my Website of Django!</h1> {% endcomment %}
+        <h1>Welcome to my Website of Django!</h1>
+        <h2>Here are your records!</h2>
+        <h2>This is an example of template inheritance!</h2>
+            <h1>{{text|cut:'World'}}</h1>
+            <h1>{{number|add:"99"}}</h1>
+            
+             {% comment %} {% if access_records %} 
+                <table>
+                    <thead>
+                        <th>Site Name</th>
+                        <th>Date Accessed</th>
+                    </thead>
+                
+                {% for acc in access_records %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+                {% endfor %}
+                </table>
+            {% else %}
+                <p>NO RECORDS ROUND</p>
+            {% endif %} {% endcomment %}
+    {% endblock %}
+
+        {% comment %} </div>
+        </div> {% endcomment %}
+        {% comment %} {{ insert_me }} {% endcomment %}
+        {% comment %} <p>I'm excited to eventually learn Django!</p>
+
+        <a href="https://www.udemy.com">Here's a link to Udemy Website</a>
+
+        <p>Here's a picture of the Python Logo:</p>
+        <img src="python.jpeg" alt="python logo not found">
+
+        <p>Here are reasons Django is cool</p>
+        <ol>
+            <li>Ridiculously Fast</li>
+            <li>Reassuringly Secure</li>
+            <li>Exceedingly Scalable</li>
+        </ol>
+
+        <div>
+            <h1>Bonus: Optional Extra Credit</h1>
+            <p>Can you figure out how to make a picture link?</p>
+        </div>
+
+        <a href="https://www.djangoproject.com/"> <img src="django.png" alt="link to django"></a> {% endcomment %}
+    {% comment %} </body> {% endcomment %}
+</html>

@@ -1,0 +1,30 @@
+{% extends 'first_app/base.html' %}
+{% comment %} {% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Django Guitar Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        {% comment %} <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/> {% endcomment %}
+    {% comment %} </head> {% endcomment %}
+    {% comment %} <body> {% endcomment %}
+    {% block body_block %}
+        <h1>Welcome to my Form Page!</h1>
+        
+        {% comment %} <img src="{% static 'images/django.png' %}" alt="Oh Oh"> {% endcomment %}
+
+        <h2>Fill in the form below!</h2>
+
+        <div class="container">
+        <div class="jumbotron">
+            <form method="post">
+            {{form.as_p}}
+            {% csrf_token %}             
+            <input type="Submit" class="btn btn-primary" value=Submit>
+            </form>
+        </div>
+        </div>
+    {% endblock %}
+       
+    {% comment %} </body> {% endcomment %}
+{% comment %} </html> {% endcomment %}
